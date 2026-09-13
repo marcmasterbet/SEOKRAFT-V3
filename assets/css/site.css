@@ -878,3 +878,132 @@ main{overflow:hidden}
   .seo-summary-strip>div{border-right:0;border-bottom:1px solid #2b2927}
   .seo-summary-strip>div:last-child{border-bottom:0}
 }
+
+
+/* CONTRASTE — correction des sections sombres et pages légales */
+.legal-hero,
+.legal-page .page-hero,
+.legal-page .dark-block,
+body.legal-page .page-hero{
+  color:#f4f0e9;
+}
+.legal-hero h1,
+.legal-hero h2,
+.legal-hero h3,
+.legal-page .page-hero h1,
+.legal-page .page-hero h2,
+.dark-block h1,
+.dark-block h2,
+.dark-block h3{
+  color:#f4f0e9;
+}
+.legal-hero p,
+.legal-hero .overline,
+.legal-page .page-hero p,
+.legal-page .page-hero .overline{
+  color:#aaa5a0;
+}
+
+/* Les pages légales de cette V3 utilisent page-hero : forcer la lisibilité
+   uniquement quand le fond est sombre. */
+.page-hero.dark,
+.page-hero[style*="background:#0"],
+.page-hero[style*="background: #0"]{
+  color:#f4f0e9;
+}
+
+/* Sécurité de contraste sur tous les blocs réellement sombres */
+.dark-block,
+.section.dark,
+.pricing-home,
+.audit-page,
+.audit-software-detail,
+.audit-deliverable,
+.audit-final-cta{
+  color:#f4f0e9;
+}
+.dark-block h1,.dark-block h2,.dark-block h3,.dark-block h4,
+.section.dark h1,.section.dark h2,.section.dark h3,.section.dark h4,
+.pricing-home h1,.pricing-home h2,.pricing-home h3,.pricing-home h4{
+  color:#f4f0e9;
+}
+
+
+/* FOOTER — liens légaux et cookies toujours visibles */
+.site-footer{
+  position:relative;
+  z-index:2;
+  background:#0d0d0d;
+  color:#f4f0e9;
+  padding:70px 5vw 28px;
+}
+.site-footer a{color:inherit;text-decoration:none}
+.footer-main{
+  max-width:1450px;
+  margin:0 auto 54px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:60px;
+  align-items:start;
+}
+.footer-logo{
+  display:inline-block;
+  font-size:24px;
+  font-weight:800;
+  letter-spacing:-.03em;
+}
+.footer-brand p{
+  margin:12px 0 0;
+  color:#8f8a85;
+}
+.footer-nav{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(130px,1fr));
+  gap:12px 34px;
+}
+.footer-nav a{
+  color:#c7c2bc;
+  font-size:14px;
+}
+.footer-bottom{
+  max-width:1450px;
+  margin:0 auto;
+  padding-top:22px;
+  border-top:1px solid #2d2b29;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  flex-wrap:wrap;
+  color:#7f7a75;
+  font-size:12px;
+}
+.footer-legal{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  flex-wrap:wrap;
+  gap:18px;
+}
+.footer-legal a,
+.cookie-settings-link{
+  color:#a9a49f;
+  font:inherit;
+  font-size:12px;
+  background:none;
+  border:0;
+  padding:0;
+  cursor:pointer;
+  text-decoration:none;
+}
+.footer-legal a:hover,
+.cookie-settings-link:hover{
+  color:#f4f0e9;
+}
+@media(max-width:760px){
+  .site-footer{padding:54px 22px 24px}
+  .footer-main{grid-template-columns:1fr;gap:32px;margin-bottom:40px}
+  .footer-nav{grid-template-columns:1fr 1fr}
+  .footer-bottom{align-items:flex-start;flex-direction:column}
+  .footer-legal{justify-content:flex-start;gap:12px 16px}
+}

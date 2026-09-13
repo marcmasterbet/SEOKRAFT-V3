@@ -41,3 +41,18 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
   });
 });
+
+
+// Footer cookie settings shortcut
+document.addEventListener("click", function(e){
+  const btn = e.target.closest("[data-cookie-settings]");
+  if(!btn) return;
+  const manage = document.querySelector("[data-cookie-manage], #cookie-manage, .cookie-manage");
+  if(manage && manage !== btn){ manage.click(); return; }
+  const banner = document.querySelector(".cookie-banner, #cookie-banner, [data-cookie-banner]");
+  if(banner){
+    banner.hidden = false;
+    banner.style.display = "";
+    banner.setAttribute("aria-hidden","false");
+  }
+});
