@@ -4,10 +4,31 @@
           <a class="btn btn-primary" href="#devis">Demander un devis</a>
           <a class="btn btn-secondary" href="#rendez-vous">Réserver un appel gratuit</a>
         </div></div></section>
-<section class="content-section" id="devis"><div class="contact-layout"><div><span class="overline">DEMANDE DE DEVIS</span><h2 style="font-size:48px;line-height:1;margin-top:18px">Expliquez-moi simplement votre besoin.</h2><p style="color:#6a645d">Votre demande arrive directement chez SEOKRAFT. Je reviens vers vous pour préciser le projet et vous proposer la suite adaptée.</p></div>
-<div class="form-panel"><form action="https://formspree.io/f/maewolkq" method="POST" data-contact-form>
-<div class="form-grid"><div class="field"><label for="name">Nom *</label><input id="name" name="name" required autocomplete="name"></div><div class="field"><label for="phone">Téléphone *</label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div><div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email"></div><div class="field"><label for="project">Votre besoin *</label><select id="project" name="project" required><option value="">Choisir votre besoin</option><option value="site">Site vitrine — 49 €/mois</option><option value="seo">Site + SEO — 149 €/mois</option><option value="geo">Site + SEO + GEO — 229 €/mois</option><option value="refonte">Refonte de site</option><option value="audit">Audit SEO / GEO</option><option value="autre">Autre projet web</option></select></div><div class="field full"><label for="message">Votre besoin</label><textarea id="message" name="message"></textarea></div></div>
-<input type="hidden" name="_subject" value="Nouvelle demande SEOKRAFT"><input type="hidden" name="source_page" id="source_page" value=""><button class="btn primary" type="submit" style="margin-top:18px">Envoyer ma demande</button><p class="form-note">En envoyant ce formulaire, vous acceptez que les informations saisies soient utilisées pour répondre à votre demande. <a href="/confidentialite/">Confidentialité</a>.</p><div class="form-status" aria-live="polite"></div></form></div></div></section>
+<section class="content-section contact-quote" id="devis">
+  <div class="contact-quote-head">
+    <span class="overline">DEMANDE DE DEVIS</span>
+    <h2>Parlez-moi de<br><em>votre projet.</em></h2>
+    <p>Quelques informations suffisent. Je vous recontacte personnellement pour comprendre votre besoin et vous proposer la solution adaptée.</p>
+  </div>
+
+  <div class="contact-form-wrap">
+    <form action="https://formspree.io/f/maewolkq" method="POST" data-contact-form>
+      <div class="contact-fields">
+        <div class="contact-field"><label for="name">Nom *</label><input id="name" name="name" required autocomplete="name" placeholder="Votre nom"></div>
+        <div class="contact-field"><label for="phone">Téléphone *</label><input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="06 00 00 00 00"></div>
+        <div class="contact-field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" placeholder="vous@entreprise.fr"></div>
+        <div class="contact-field"><label for="project">Votre besoin *</label><select id="project" name="project" required><option value="">Sélectionner une prestation</option><option value="site">Site vitrine — 49 €/mois</option><option value="seo">Site + SEO — 149 €/mois</option><option value="geo">Site + SEO + GEO — 229 €/mois</option><option value="refonte">Refonte de site</option><option value="audit">Audit SEO / GEO</option><option value="autre">Autre projet web</option></select></div>
+        <div class="contact-field contact-message"><label for="message">Votre projet</label><textarea id="message" name="message" placeholder="Parlez-moi de votre activité, de votre besoin ou de votre objectif…"></textarea></div>
+      </div>
+      <input type="hidden" name="_subject" value="Nouvelle demande SEOKRAFT"><input type="hidden" name="source_page" id="source_page" value="">
+      <div class="contact-submit-row">
+        <button class="btn btn-primary" type="submit">Envoyer ma demande <span>↗</span></button>
+        <p class="form-note">Vos informations servent uniquement à répondre à votre demande. <a href="/confidentialite/">Confidentialité</a>.</p>
+      </div>
+      <div class="form-status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
 
 <section class="content-section dark-block" id="rendez-vous">
   <div class="appointment-wrap">
@@ -70,6 +91,20 @@ Cal.ns["appel-seokraft"]("ui", {
   hideEventTypeDetails: false,
   layout: "month_view",
   theme: "dark"
+});
+
+/* Après une réservation réussie, quitter l'écran de confirmation Cal.com
+   et afficher la confirmation SEOKRAFT. */
+Cal.ns["appel-seokraft"]("on", {
+  action: "bookingSuccessfulV2",
+  callback: function (e) {
+    var data = (e && e.detail && e.detail.data) ? e.detail.data : {};
+    var params = new URLSearchParams();
+    if (data.startTime) params.set("startTime", data.startTime);
+    if (data.endTime) params.set("endTime", data.endTime);
+    if (data.uid) params.set("uid", data.uid);
+    window.location.href = "/rendez-vous-confirme/?" + params.toString();
+  }
 });
 </script>
 
