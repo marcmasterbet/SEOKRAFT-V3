@@ -1127,3 +1127,70 @@ body.legal-page .page-hero{
   .compare-lines>div{grid-template-columns:1fr;gap:10px}
   .about-person{padding:78px 22px}.about-links{padding:0 22px 75px}.about-links a{flex-direction:column;gap:8px}
 }
+
+
+/* V3 — fond signature SEOKRAFT sur toutes les pages */
+html,body{
+  background:#090909;
+}
+body{
+  background:
+    radial-gradient(circle at 10% 24%,rgba(90,45,114,.28),transparent 31%),
+    radial-gradient(circle at 92% 38%,rgba(166,124,82,.23),transparent 33%),
+    linear-gradient(180deg,#080808 0%,#0b0a09 48%,#090909 100%);
+  background-attachment:fixed;
+}
+main,
+.section.light,
+.section.dark,
+.content-section,
+.content-section.dark-block,
+.cta-section,
+.blog-editorial-list,
+.blog-final-cta,
+.audit-analysis,
+.audit-deliverable,
+.audit-final-cta,
+.audit-software-detail,
+.expertise-showcase,
+.about-person,
+.about-links{
+  background:transparent !important;
+  color:#f4f0e9 !important;
+}
+.page-hero,
+.hero,
+.blog-editorial-hero,
+.audit-hero{
+  background:
+    radial-gradient(circle at 14% 34%,rgba(90,45,114,.24),transparent 30%),
+    radial-gradient(circle at 88% 56%,rgba(166,124,82,.20),transparent 31%),
+    transparent !important;
+}
+.section.light p,
+.content-section p,
+.cta-section p,
+.blog-editorial-list p,
+.audit-analysis p,
+.about-person p,
+.about-links p{
+  color:#aaa5a0;
+}
+.section.light h1,.section.light h2,.section.light h3,
+.content-section h1,.content-section h2,.content-section h3,
+.cta-section h1,.cta-section h2,.cta-section h3,
+.blog-editorial-list h1,.blog-editorial-list h2,.blog-editorial-list h3,
+.audit-analysis h1,.audit-analysis h2,.audit-analysis h3,
+.about-person h1,.about-person h2,.about-person h3,
+.about-links h1,.about-links h2,.about-links h3{
+  color:#f4f0e9;
+}
+.pricing-rows-light .pricing-row,
+.blog-editorial-row,
+.feature-line,
+.process-line{
+  border-color:rgba(255,255,255,.16) !important;
+}
+.pricing-rows-light .pricing-row:hover{
+  background:rgba(255,255,255,.025) !important;
+}
