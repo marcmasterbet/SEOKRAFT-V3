@@ -4,5 +4,69 @@
 <div class="form-card"><form action="https://formspree.io/f/maewolkq" method="POST" data-contact-form>
 <div class="form-grid"><div class="field"><label for="name">Nom *</label><input id="name" name="name" required autocomplete="name"></div><div class="field"><label for="phone">Téléphone *</label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div><div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email"></div><div class="field"><label for="project">Votre besoin *</label><select id="project" name="project" required><option value="">Choisir votre besoin</option><option value="site">Site vitrine — 49 €/mois</option><option value="seo">Site + SEO — 149 €/mois</option><option value="geo">Site + SEO + GEO — 229 €/mois</option><option value="refonte">Refonte de site</option><option value="audit">Audit SEO / GEO</option><option value="autre">Autre projet web</option></select></div><div class="field full"><label for="message">Votre besoin</label><textarea id="message" name="message"></textarea></div></div>
 <input type="hidden" name="_subject" value="Nouvelle demande SEOKRAFT"><input type="hidden" name="source_page" id="source_page" value=""><button class="btn primary" type="submit" style="margin-top:18px">Envoyer ma demande</button><p class="form-note">En envoyant ce formulaire, vous acceptez que les informations saisies soient utilisées pour répondre à votre demande. <a href="/confidentialite/">Confidentialité</a>.</p><div class="form-status" aria-live="polite"></div></form></div></div></section>
-<section class="content-section dark-block" id="rendez-vous"><div class="appointment-box"><div><span class="overline">APPEL GRATUIT · 20 MIN</span><h2 style="font-size:48px;line-height:1;margin-top:18px">Un premier échange sans engagement.</h2><div class="availability"><div><b>Lundi — jeudi</b><span>17h00 — 20h00</span></div><div><b>Vendredi</b><span>17h00 — 18h30</span></div><div><b>Samedi — dimanche</b><span>Fermé</span></div></div></div><div class="calendar-placeholder"><h3>Calendrier de réservation</h3><p>Le calendrier sera connecté ici dès que le lien Cal.com sera disponible.</p><a class="btn ghost" href="mailto:contact@seokraft.fr?subject=Rendez-vous%20téléphonique%20SEOKRAFT">Demander un créneau par e-mail</a></div></div></section>
+
+<section class="content-section dark-block" id="rendez-vous">
+  <div class="appointment-wrap">
+    <div class="appointment-intro">
+      <span class="overline">APPEL GRATUIT · 20 MIN</span>
+      <h2>Choisissez directement<br>votre créneau.</h2>
+      <p>Un échange téléphonique gratuit pour parler de votre projet de site internet, SEO ou GEO.</p>
+    </div>
+
+    <div class="cal-shell">
+      <div id="my-cal-inline-appel-seokraft" class="cal-inline"></div>
+      <noscript>
+        <p>JavaScript est nécessaire pour afficher le calendrier.
+        <a href="https://cal.com/marc-bretzner-n3gogo/appel-seokraft" target="_blank" rel="noopener">Ouvrir le calendrier Cal.com</a>.</p>
+      </noscript>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+(function (C, A, L) {
+  let p = function (a, ar) { a.q.push(ar); };
+  let d = C.document;
+  C.Cal = C.Cal || function () {
+    let cal = C.Cal;
+    let ar = arguments;
+    if (!cal.loaded) {
+      cal.ns = {};
+      cal.q = cal.q || [];
+      d.head.appendChild(d.createElement("script")).src = A;
+      cal.loaded = true;
+    }
+    if (ar[0] === L) {
+      const api = function () { p(api, arguments); };
+      const namespace = ar[1];
+      api.q = api.q || [];
+      if (typeof namespace === "string") {
+        cal.ns[namespace] = cal.ns[namespace] || api;
+        p(cal.ns[namespace], ar);
+        p(cal, ["initNamespace", namespace]);
+      } else p(cal, ar);
+      return;
+    }
+    p(cal, ar);
+  };
+})(window, "https://app.cal.com/embed/embed.js", "init");
+
+Cal("init", "appel-seokraft", {origin:"https://cal.com"});
+
+Cal.ns["appel-seokraft"]("inline", {
+  elementOrSelector: "#my-cal-inline-appel-seokraft",
+  calLink: "marc-bretzner-n3gogo/appel-seokraft",
+  config: {
+    layout: "month_view",
+    theme: "dark"
+  }
+});
+
+Cal.ns["appel-seokraft"]("ui", {
+  hideEventTypeDetails: false,
+  layout: "month_view",
+  theme: "dark"
+});
+</script>
+
 </main><footer class="site-footer"><div class="footer-grid"><div class="footer-brand"><img src="/assets/img/logo.svg" alt="SEOKRAFT"><p>Création web · SEO · GEO<br>Alsace</p></div><div><b>Expertises</b><a href="/creation-web/">Création web</a><a href="/seo/">SEO</a><a href="/geo/">GEO</a></div><div><b>SEOKRAFT</b><a href="/realisations/">Réalisations</a><a href="/tarifs/">Tarifs</a><a href="/a-propos/">À propos</a><a href="/blog/">Blog</a></div><div><b>Contact</b><a href="/contact/">Demander un devis</a><a href="/contact/#rendez-vous">Appel gratuit · 20 min</a></div></div><div class="footer-bottom"><span>© 2026 EI BRETZNER MARC</span><span><a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a> · <a href="/cgv/">CGV</a></span></div></footer><script src="/assets/js/site.js" defer></script></body></html>

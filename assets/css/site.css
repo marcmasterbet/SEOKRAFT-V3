@@ -28,13 +28,13 @@ main{overflow:hidden}
 .nav-links>a:hover,.nav-drop-btn:hover{color:#fff}
 .nav-drop{position:relative}
 .nav-drop-btn{padding:23px 0;background:none;border:0;color:#d7d4cf;cursor:pointer}
-.mega{position:absolute;top:58px;left:50%;width:700px;transform:translateX(-50%) translateY(8px);display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#f4f0e9;color:#151410;padding:12px;border:1px solid #d6d0c7;border-radius:18px;opacity:0;visibility:hidden;transition:.2s;box-shadow:0 24px 80px rgba(0,0,0,.35)}
+.mega{position:absolute;top:54px;left:50%;width:560px;transform:translateX(-50%) translateY(8px);display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#f4f0e9;color:#151410;padding:8px;border:1px solid #d6d0c7;border-radius:15px;opacity:0;visibility:hidden;transition:.2s;box-shadow:0 20px 60px rgba(0,0,0,.32)}
 .nav-drop:hover .mega,.nav-drop.open .mega{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
-.mega a{display:flex;gap:16px;padding:18px;border-radius:12px}
+.mega a{display:flex;gap:11px;padding:12px 13px;border-radius:10px}
 .mega a:hover{background:#e9e3db}
-.mega small{font-size:11px;color:#8c857d}
-.mega b{display:block}
-.mega span{display:block;margin-top:5px;color:#6d675f;font-size:12px}
+.mega small{font-size:10px;color:#8c857d;padding-top:2px}
+.mega b{display:block;font-size:14px;line-height:1.2}
+.mega span{display:block;margin-top:3px;color:#6d675f;font-size:11px;line-height:1.35}
 .nav-cta{background:#f4f0e9;color:#11110f;padding:14px 18px;border-radius:12px;font-size:14px;font-weight:800}
 .nav-cta span{float:right}
 .burger{display:none;background:none;border:0;color:#fff;font-size:24px}
@@ -206,3 +206,58 @@ main{overflow:hidden}
 .cookie-banner{position:fixed;z-index:2000;left:50%;bottom:20px;transform:translateX(-50%);width:min(920px,calc(100% - 32px));display:flex;align-items:center;gap:26px;padding:19px 20px;background:rgba(15,14,13,.97);color:#f6f2ec;border:1px solid #34312e;border-radius:16px;box-shadow:0 24px 70px rgba(0,0,0,.45);backdrop-filter:blur(16px)}
 .cookie-banner__content{flex:1;min-width:0}.cookie-banner__content strong{display:block;margin-bottom:5px;font-size:13px;letter-spacing:.04em}.cookie-banner__content p{margin:0;color:#aaa39b;font-size:12px;line-height:1.55}.cookie-banner__content a{color:#eee9e1;text-decoration:underline;text-underline-offset:2px}.cookie-banner__actions{display:flex;gap:8px;flex:0 0 auto}.cookie-btn{cursor:pointer;border-radius:10px;padding:10px 15px;font:800 11px/1 Inter,Arial,sans-serif}.cookie-btn--primary{color:#111;background:#f4f0e9;border:1px solid #f4f0e9}.cookie-btn--ghost{color:#e8e3db;background:#171614;border:1px solid #3c3935}.cookie-btn:focus-visible,.cookie-manage:focus-visible{outline:2px solid #d7c7b5;outline-offset:3px}.cookie-manage{position:fixed;z-index:1900;left:12px;bottom:12px;cursor:pointer;color:#8f8982;background:rgba(15,14,13,.93);border:1px solid #34312e;border-radius:9px;padding:8px 10px;font:700 10px/1 Inter,Arial,sans-serif}.cookie-manage:hover{color:#f4f0e9}
 @media(max-width:720px){.cookie-banner{align-items:stretch;flex-direction:column;gap:15px;bottom:10px;padding:17px}.cookie-banner__actions{width:100%}.cookie-btn{flex:1}.cookie-manage{left:8px;bottom:8px}}
+
+
+/* Cal.com intégré — SEOKRAFT V3 */
+.appointment-wrap{
+  max-width:1450px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:minmax(280px,.72fr) minmax(0,1.28fr);
+  gap:54px;
+  align-items:start;
+}
+.appointment-intro{
+  position:sticky;
+  top:32px;
+  padding-top:8px;
+}
+.appointment-intro h2{
+  font-size:clamp(42px,4.6vw,70px);
+  line-height:.98;
+  letter-spacing:-.055em;
+  margin:18px 0 20px;
+}
+.appointment-intro>p{
+  max-width:560px;
+  color:#aaa5a0;
+  font-size:17px;
+}
+.cal-shell{
+  min-height:720px;
+  padding:10px;
+  overflow:hidden;
+  border:1px solid #302e2c;
+  border-radius:20px;
+  background:#11100f;
+  box-shadow:0 30px 80px rgba(0,0,0,.25);
+}
+.cal-inline{
+  width:100%;
+  min-height:700px;
+}
+.cal-inline iframe{
+  width:100%!important;
+  min-height:700px!important;
+  border:0!important;
+  border-radius:14px!important;
+  background:#11100f!important;
+}
+@media(max-width:1000px){
+  .appointment-wrap{grid-template-columns:1fr}
+  .appointment-intro{position:static}
+}
+@media(max-width:720px){
+  .cal-shell{min-height:760px;padding:0;border-radius:16px}
+  .cal-inline,.cal-inline iframe{min-height:760px!important}
+}
