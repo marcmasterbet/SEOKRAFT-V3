@@ -1007,3 +1007,16 @@ body.legal-page .page-hero{
   .footer-bottom{align-items:flex-start;flex-direction:column}
   .footer-legal{justify-content:flex-start;gap:12px 16px}
 }
+
+
+/* Correction ciblée pages légales — aucun impact sur le reste du site */
+.legal-wrap > .page-hero{
+  color:#f4f0e9 !important;
+}
+.legal-wrap > .page-hero h1,
+.legal-wrap > .page-hero .eyebrow{
+  color:#f4f0e9 !important;
+}
+.legal-wrap > .page-hero p{
+  color:#aaa5a0 !important;
+}
