@@ -1396,3 +1396,78 @@ main,
   .remus-browser-image{aspect-ratio:16/10}
   .remus-browser-image img{object-fit:cover;object-position:center top}
 }
+
+
+/* =========================================================
+   SEOKRAFT V3 — fond global corrigé
+   Suppression des grands aplats marron présents sur toutes les pages.
+   ========================================================= */
+html{
+  background:#080808;
+}
+body{
+  background:
+    radial-gradient(900px 620px at -8% 8%, rgba(90,45,114,.16), transparent 62%),
+    radial-gradient(760px 560px at 108% 26%, rgba(166,124,82,.07), transparent 64%),
+    #080808 !important;
+  background-attachment:scroll !important;
+  background-repeat:no-repeat !important;
+  min-height:100vh;
+}
+
+/* Les grands blocs utilisent le même fond au lieu de créer des panneaux colorés. */
+.hero,
+.page-hero,
+.expertise-hero,
+.blog-editorial-hero,
+.audit-hero,
+.content-section,
+.content-section.light,
+.content-section.dark-block,
+.light,
+.dark-block,
+.section.dark,
+.cta-section,
+.blog-editorial-list,
+.blog-final-cta,
+.audit-analysis,
+.audit-deliverable,
+.audit-final-cta,
+.audit-software-detail,
+.expertise-showcase,
+.about-person,
+.about-links,
+.real-site-showcase{
+  background:transparent !important;
+}
+
+/* Halo très léger uniquement dans les grands headers, sans aplat marron. */
+.hero::before,
+.page-hero::before,
+.expertise-hero::before,
+.blog-editorial-hero::before,
+.audit-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(520px 360px at 14% 30%, rgba(90,45,114,.10), transparent 70%),
+    radial-gradient(500px 340px at 88% 58%, rgba(166,124,82,.045), transparent 72%);
+  z-index:0;
+}
+.hero > *,
+.page-hero > *,
+.expertise-hero > *,
+.blog-editorial-hero > *,
+.audit-hero > *{
+  position:relative;
+  z-index:1;
+}
+
+/* Évite les hauteurs artificiellement énormes sur les pages internes. */
+.page-hero,
+.expertise-hero,
+.audit-hero{
+  min-height:0 !important;
+}
