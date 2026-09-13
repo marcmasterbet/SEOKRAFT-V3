@@ -1721,3 +1721,292 @@ body{
   .about-final-actions{flex-direction:column;align-items:stretch}
   .about-final-actions .btn{width:100%}
 }
+
+/* =========================================================
+   SEOKRAFT V3 — MOBILE FINAL
+   Optimisations exclusivement <= 1000px.
+   Aucun style desktop n'est modifié.
+   ========================================================= */
+@media (max-width:1000px){
+  html,body{max-width:100%;overflow-x:hidden}
+  body{-webkit-text-size-adjust:100%}
+  img,svg,video,iframe{max-width:100%}
+
+  /* Navigation mobile */
+  .site-header{left:0;right:0}
+  .nav-shell{position:relative;grid-template-columns:minmax(0,1fr) 46px;gap:10px}
+  .burger{width:46px;height:46px;padding:0;place-items:center;border-radius:12px;cursor:pointer;line-height:1}
+  .nav-links.open{
+    display:grid;
+    position:absolute;
+    top:calc(100% + 10px);
+    left:0;
+    right:0;
+    max-height:calc(100vh - 105px);
+    overflow:auto;
+    padding:18px;
+    gap:4px;
+    background:rgba(11,11,10,.985);
+    border:1px solid rgba(255,255,255,.13);
+    box-shadow:0 24px 70px rgba(0,0,0,.52);
+    backdrop-filter:blur(18px);
+  }
+  .nav-links.open>a,
+  .nav-links.open .nav-drop-btn{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:48px;padding:11px 12px;border-radius:10px;font-size:15px;text-align:left}
+  .nav-links.open>a:hover,.nav-links.open .nav-drop-btn:hover{background:rgba(255,255,255,.04)}
+  .nav-drop{width:100%}
+  .nav-drop.open .mega{width:100%;margin:4px 0 8px;padding:6px;border-radius:12px}
+  .mega a{min-height:56px;padding:10px 11px}
+
+  /* Mise en page générale */
+  .split-head{grid-template-columns:1fr;gap:22px;margin-bottom:48px}
+  .split-head p{max-width:680px}
+  .actions,.contact-dual-actions{flex-wrap:wrap}
+  .btn{min-height:46px}
+  .site-footer{padding-left:28px;padding-right:28px}
+  .footer-main{grid-template-columns:1fr;gap:34px;margin-bottom:38px}
+  .footer-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 26px}
+  .footer-nav a{min-height:34px;display:flex;align-items:center}
+  .footer-bottom{align-items:flex-start}
+  .footer-legal{justify-content:flex-start}
+
+  /* Largeurs et composants complexes */
+  .audit-app-shell,.audit-app-shell-detail,.expertise-dashboard,.web-blueprint,.remus-browser,.site-preview{width:100%;min-width:0}
+  .audit-app-body{min-height:0}
+  .dashboard-heading{min-width:0}
+  .seo-action,.issue-row,.signal-line{min-width:0}
+  .ownership-band{padding-left:28px;padding-right:28px}
+}
+
+@media (max-width:720px){
+  :root{--mobile-pad:20px}
+
+  /* Header */
+  .site-header{top:8px}
+  .nav-shell{width:calc(100% - 16px);height:60px;padding:0 8px 0 15px;border-radius:15px}
+  .brand{min-width:0}
+  .brand img{width:132px;max-width:100%}
+  .burger{display:grid;font-size:22px}
+  .nav-links.open{top:68px;border-radius:14px;padding:12px}
+
+  /* Typographie mobile : lisible sans casser les lignes */
+  .hero{padding:126px var(--mobile-pad) 64px}
+  .hero-clean{min-height:auto}
+  .hero h1,.page-hero h1,.audit-hero h1,.blog-editorial-hero h1{
+    font-size:clamp(40px,12.2vw,54px) !important;
+    line-height:.95 !important;
+    letter-spacing:-.055em !important;
+    overflow-wrap:normal;
+    word-break:normal;
+  }
+  .hero h1,.page-hero h1{margin-top:24px;margin-bottom:22px}
+  .hero-copy>p,.page-hero p,.audit-lead,.blog-editorial-hero p{font-size:16px;line-height:1.65}
+  .pill{font-size:10px;padding:8px 11px}
+  .overline{font-size:10px}
+  .split-head h2,.cta-box h2,.audit-section-heading h2,.audit-detail-intro h2,.audit-final-cta h2{
+    font-size:clamp(36px,10.5vw,50px) !important;
+    line-height:.98 !important;
+    letter-spacing:-.045em !important;
+  }
+  .split-head p,.showcase-copy p,.audit-section-heading p,.audit-detail-intro p,.audit-final-cta p{font-size:16px}
+
+  /* CTA */
+  .actions,.contact-dual-actions{display:grid;grid-template-columns:1fr;width:100%;gap:10px}
+  .actions .btn,.contact-dual-actions .btn{width:100%;min-height:50px;text-align:center}
+  .cta-section{padding:58px var(--mobile-pad)}
+  .cta-box{padding:54px 22px;border-radius:18px}
+  .cta-box .actions{margin-top:26px}
+
+  /* Accueil */
+  .home-gateway,.home-projects,.pricing-home-simple{padding:68px var(--mobile-pad)}
+  .service-rows>a{grid-template-columns:38px minmax(0,1fr) 26px;gap:12px;padding:25px 0}
+  .service-rows h3{font-size:24px;line-height:1.08}
+  .home-service-rows a i{font-size:0;white-space:normal}
+  .home-service-rows a i::after{content:'↗';font-size:18px}
+  .home-project-strip{gap:32px;margin-top:38px}
+  .home-project-strip img{border-radius:10px}
+  .section-link{text-align:left;margin-top:32px}
+  .pricing-row{gap:10px;padding:24px 0}
+  .pricing-row h3{font-size:28px}
+  .pricing-row p{font-size:14px}
+  .pricing-row strong{font-size:42px}
+
+  /* Pages internes */
+  .page-hero{padding:126px var(--mobile-pad) 68px}
+  .content-section,.section{padding:72px var(--mobile-pad)}
+  .expertise-showcase,.expertise-steps,.seo-path,.geo-contrast,.about-values{padding:70px var(--mobile-pad)}
+  .showcase-copy h2{font-size:clamp(34px,10vw,48px)}
+  .feature-lines article{grid-template-columns:1fr;gap:8px;padding:24px 0}
+  .feature-lines h3{font-size:27px}
+  .feature-lines p{font-size:15px}
+  .journey{margin-top:38px}
+  .journey article{grid-template-columns:36px minmax(0,1fr);gap:12px;padding:24px 0}
+  .journey h3{font-size:21px}
+  .journey p{grid-column:2;font-size:14px;line-height:1.6}
+  .compare-lines{margin-top:38px}
+  .compare-lines>div{padding:24px 0}
+  .seo-action-board{margin-top:38px}
+  .geo-question{margin:20px 0;padding:18px;font-size:22px}
+  .geo-flow{padding:0 0 22px;gap:7px}
+
+  /* Mini dashboards SEO / GEO */
+  .expertise-dashboard{border-radius:15px}
+  .dash-top{height:auto;min-height:52px;padding:12px 14px;gap:12px}
+  .dash-grid{grid-template-columns:1fr !important}
+  .dash-grid>div{padding:19px 16px}
+  .dash-priorities{padding:18px 16px}
+  .geo-signals{grid-template-columns:1fr !important}
+  .geo-signals span{padding:18px 16px}
+
+  /* Audit */
+  .audit-hero{padding:126px var(--mobile-pad) 70px}
+  .audit-hero-copy{margin-bottom:42px}
+  .audit-app-shell{border-radius:16px}
+  .audit-app-topbar{height:50px;padding:0 14px}
+  .audit-dashboard{padding:14px}
+  .dashboard-heading{margin-bottom:20px}
+  .dashboard-heading h2{font-size:25px}
+  .scan-pill{font-size:10px}
+  .audit-overview-grid{gap:12px}
+  .score-card,.metric-card{padding:17px}
+  .audit-lower-grid{gap:18px;margin-top:18px}
+  .issues-panel,.signals-panel{padding:17px}
+  .issue-row{grid-template-columns:9px minmax(0,1fr);gap:10px;padding:13px 0}
+  .issue-row em{grid-column:2;white-space:normal}
+  .signal-line{font-size:11px}
+  .audit-analysis,.audit-deliverable,.audit-final-cta{padding:72px var(--mobile-pad)}
+  .audit-section-heading{margin-bottom:44px}
+  .audit-lines article{padding:28px 0}
+  .audit-lines h3{font-size:30px}
+  .audit-lines p{font-size:15px}
+  .deliverable-list>div{grid-template-columns:34px minmax(0,1fr);gap:10px;padding:21px 0}
+  .deliverable-list p{grid-column:2;font-size:13px}
+  .audit-software-detail{padding:72px var(--mobile-pad)}
+  .audit-detail-intro{margin-bottom:40px}
+  .seo-summary-strip{grid-template-columns:1fr 1fr;gap:0;margin-bottom:18px}
+  .seo-summary-strip>div{padding:15px 12px}
+  .seo-summary-strip strong{font-size:19px}
+  .seo-action{padding:21px 0;gap:12px}
+  .action-main h3{font-size:19px}
+  .action-change{padding:12px}
+
+  /* Tarifs */
+  .offer-detail{padding:70px var(--mobile-pad);gap:18px}
+  .offer-number{font-size:28px}
+  .offer-intro h2{font-size:clamp(36px,10vw,46px);margin-top:8px}
+  .offer-intro p{font-size:15px}
+  .offer-price{margin-top:25px}
+  .offer-price strong{font-size:44px}
+  .offer-list{padding-top:20px}
+  .offer-list li{padding-top:11px;padding-bottom:11px;font-size:14px}
+  .ownership-band{padding:62px var(--mobile-pad);gap:18px}
+  .ownership-band h2{font-size:36px}
+  .ownership-band p{font-size:15px}
+
+  /* Réalisations / REMUS */
+  .case-grid{gap:46px}
+  .case-grid a{margin-top:0 !important}
+  .case-grid h2{font-size:26px}
+  .real-site-showcase{padding:70px var(--mobile-pad)}
+  .real-site-head{margin-bottom:28px}
+  .real-site-head h2{font-size:clamp(36px,10vw,48px)}
+  .real-site-head p{font-size:15px}
+  .real-browser-top{height:43px;padding:0 12px}
+  .real-browser-top b{max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .real-browser-top em{display:none}
+  .remus-browser-image{aspect-ratio:4/3}
+  .real-site-note{font-size:11px}
+
+  /* Contact + formulaire */
+  .contact-quote{padding:72px var(--mobile-pad) 80px !important}
+  .contact-quote-head{padding-bottom:34px}
+  .contact-quote-head h2{font-size:clamp(38px,10.5vw,50px);line-height:.98}
+  .contact-quote-head p{font-size:15px}
+  .contact-form-wrap{padding-top:38px}
+  .contact-fields{gap:26px}
+  .contact-field label{font-size:11px}
+  .contact-field input,.contact-field select,.contact-field textarea{font-size:16px;min-height:52px}
+  .contact-submit-row{margin-top:30px;gap:16px}
+  .contact-submit-row .btn{width:100%;min-height:50px}
+  .contact-submit-row .form-note{font-size:11px;line-height:1.55}
+
+  /* Cal.com : largeur réelle du téléphone, aucun débordement */
+  .appointment-wrap{gap:34px}
+  .appointment-intro{position:static;padding-top:0}
+  .appointment-intro h2{font-size:clamp(36px,10vw,48px);margin:12px 0 16px}
+  .appointment-intro>p{font-size:15px}
+  .cal-shell{width:100%;min-height:720px;padding:0;border-radius:14px;overflow:hidden}
+  .cal-inline,.cal-inline iframe{width:100% !important;min-width:0 !important;min-height:720px !important;border-radius:12px !important}
+
+  /* Blog */
+  .blog-editorial-hero{min-height:auto;padding:126px var(--mobile-pad) 68px}
+  .blog-editorial-list{padding:70px var(--mobile-pad) 82px}
+  .blog-list-heading{margin-bottom:30px}
+  .journal-row{padding:28px 0;gap:14px}
+  .journal-title{font-size:clamp(28px,8.5vw,38px) !important;line-height:1.02}
+  .journal-copy p{font-size:14px}
+  .journal-link{margin-top:18px}
+  .blog-final-cta{padding:72px var(--mobile-pad)}
+
+  /* À propos */
+  .about-person-final{width:calc(100% - 40px);padding:68px 0 80px !important;gap:38px !important}
+  .about-portrait-panel{width:100%;max-width:none;min-height:0;aspect-ratio:4/5;border-radius:18px}
+  .about-portrait-panel img{object-position:center 22%}
+  .about-portrait-caption{left:20px;bottom:19px}
+  .about-portrait-caption strong{font-size:27px}
+  .about-copy-final h2{font-size:clamp(38px,10.5vw,50px);line-height:.98;margin-bottom:24px}
+  .about-copy-final p{font-size:15px}
+  .about-copy-final .about-intro{font-size:17px}
+  .about-pillars{grid-template-columns:1fr 1fr;gap:20px 14px;margin:30px 0}
+  .about-final-actions{display:grid !important;grid-template-columns:1fr;gap:10px}
+  .about-final-actions .btn{width:100%}
+  .about-links{padding:0 var(--mobile-pad) 68px}
+  .about-links a{padding:23px 0}
+
+  /* Footer */
+  .site-footer{padding:58px var(--mobile-pad) 24px}
+  .footer-main{margin-bottom:34px}
+  .footer-nav{grid-template-columns:1fr 1fr;gap:6px 18px}
+  .footer-nav a{font-size:13px}
+  .footer-bottom{margin-top:0;padding-top:20px;gap:18px}
+  .footer-legal{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:10px 16px}
+  .cookie-settings-link{text-align:left;padding:0;min-height:32px}
+
+  /* Cookies */
+  .cookie-banner{width:calc(100% - 20px);bottom:8px;padding:15px;border-radius:14px}
+  .cookie-banner__actions{display:grid;grid-template-columns:1fr 1fr}
+  .cookie-btn{min-height:44px}
+  .cookie-manage{padding:8px 9px}
+
+  /* Confirmation de rendez-vous */
+  .booking-confirmation{min-height:100svh !important;padding:118px var(--mobile-pad) 54px !important}
+  .booking-confirmation-inner{width:100% !important}
+  .booking-check{width:58px !important;height:58px !important;margin-bottom:22px !important;font-size:24px !important}
+  .booking-confirmation h1{font-size:clamp(42px,12vw,56px) !important;line-height:.94 !important;letter-spacing:-.055em !important}
+  .booking-confirmation .lead{margin-top:22px !important;font-size:15px !important;line-height:1.65 !important}
+  .booking-details{margin-top:30px !important;padding:22px 0 !important}
+  .booking-details strong{font-size:17px !important;line-height:1.45;display:block}
+  .booking-actions{display:grid !important;grid-template-columns:1fr !important;gap:10px !important;margin-top:30px !important}
+  .booking-actions .btn{width:100%;min-height:49px}
+  .booking-note{font-size:11px !important;line-height:1.55 !important;margin-top:20px !important}
+}
+
+@media (max-width:430px){
+  :root{--mobile-pad:18px}
+  .hero h1,.page-hero h1,.audit-hero h1,.blog-editorial-hero h1{font-size:clamp(38px,11.5vw,48px) !important}
+  .hero-copy>p,.page-hero p{font-size:15px}
+  .nav-shell{width:calc(100% - 12px)}
+  .brand img{width:126px}
+  .about-pillars{grid-template-columns:1fr}
+  .seo-summary-strip{grid-template-columns:1fr}
+  .footer-nav{grid-template-columns:1fr 1fr}
+  .footer-legal{grid-template-columns:1fr}
+}
+
+@media (max-width:350px){
+  :root{--mobile-pad:16px}
+  .hero h1,.page-hero h1,.audit-hero h1,.blog-editorial-hero h1{font-size:37px !important}
+  .brand img{width:116px}
+  .nav-shell{padding-left:12px}
+  .footer-nav{grid-template-columns:1fr}
+}
