@@ -1399,34 +1399,24 @@ main,
 
 
 /* =========================================================
-   SEOKRAFT V3 — fond global corrigé
-   Suppression des grands aplats marron présents sur toutes les pages.
+   SEOKRAFT V3 — fond global SAFE
+   Visuel uniquement : ne touche ni aux hauteurs, ni au z-index,
+   ni au positionnement des contenus.
    ========================================================= */
-html{
-  background:#080808;
+html, body{
+  background-color:#080808 !important;
 }
 body{
-  background:
-    radial-gradient(900px 620px at -8% 8%, rgba(90,45,114,.16), transparent 62%),
-    radial-gradient(760px 560px at 108% 26%, rgba(166,124,82,.07), transparent 64%),
-    #080808 !important;
-  background-attachment:scroll !important;
+  background-image:
+    radial-gradient(820px 600px at 0% 12%, rgba(90,45,114,.14), transparent 66%),
+    radial-gradient(760px 540px at 100% 46%, rgba(166,124,82,.055), transparent 68%) !important;
   background-repeat:no-repeat !important;
-  min-height:100vh;
+  background-attachment:scroll !important;
 }
 
-/* Les grands blocs utilisent le même fond au lieu de créer des panneaux colorés. */
-.hero,
-.page-hero,
-.expertise-hero,
-.blog-editorial-hero,
-.audit-hero,
+/* Neutralise seulement les aplats de sections, sans toucher à leur structure. */
 .content-section,
-.content-section.light,
 .content-section.dark-block,
-.light,
-.dark-block,
-.section.dark,
 .cta-section,
 .blog-editorial-list,
 .blog-final-cta,
@@ -1438,36 +1428,15 @@ body{
 .about-person,
 .about-links,
 .real-site-showcase{
-  background:transparent !important;
+  background-color:transparent !important;
 }
 
-/* Halo très léger uniquement dans les grands headers, sans aplat marron. */
-.hero::before,
-.page-hero::before,
-.expertise-hero::before,
-.blog-editorial-hero::before,
-.audit-hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background:
-    radial-gradient(520px 360px at 14% 30%, rgba(90,45,114,.10), transparent 70%),
-    radial-gradient(500px 340px at 88% 58%, rgba(166,124,82,.045), transparent 72%);
-  z-index:0;
-}
-.hero > *,
-.page-hero > *,
-.expertise-hero > *,
-.blog-editorial-hero > *,
-.audit-hero > *{
-  position:relative;
-  z-index:1;
-}
-
-/* Évite les hauteurs artificiellement énormes sur les pages internes. */
+/* Les héros conservent leur mise en page d'origine.
+   On réduit uniquement le brun. */
+.hero,
 .page-hero,
 .expertise-hero,
+.blog-editorial-hero,
 .audit-hero{
-  min-height:0 !important;
+  background-color:#080808 !important;
 }
