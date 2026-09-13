@@ -41,18 +41,18 @@
         </div>
 
         <div class="audit-overview-grid">
-          <div class="score-card">
+          <div class="score-block">
             <span class="metric-label">Score global</span>
             <div class="score-ring"><strong>64</strong><small>/100</small></div>
             <span class="score-note">Potentiel d’amélioration</span>
           </div>
-          <div class="metric-card"><span class="metric-label">SEO</span><strong>72</strong><div class="metric-bar"><i style="width:72%"></i></div><small>Base correcte, contenu à renforcer</small></div>
-          <div class="metric-card"><span class="metric-label">SEO local</span><strong>58</strong><div class="metric-bar"><i style="width:58%"></i></div><small>Présence locale incomplète</small></div>
-          <div class="metric-card"><span class="metric-label">GEO</span><strong>46</strong><div class="metric-bar"><i style="width:46%"></i></div><small>Structure IA à développer</small></div>
+          <div class="metric-block"><span class="metric-label">SEO</span><strong>72</strong><div class="metric-bar"><i style="width:72%"></i></div><small>Base correcte, contenu à renforcer</small></div>
+          <div class="metric-block"><span class="metric-label">SEO local</span><strong>58</strong><div class="metric-bar"><i style="width:58%"></i></div><small>Présence locale incomplète</small></div>
+          <div class="metric-block"><span class="metric-label">GEO</span><strong>46</strong><div class="metric-bar"><i style="width:46%"></i></div><small>Structure IA à développer</small></div>
         </div>
 
         <div class="audit-lower-grid">
-          <div class="issues-panel">
+          <div class="issues-block">
             <div class="panel-head"><div><small>PRIORITÉS</small><h3>Points à traiter</h3></div><span>4 détectés</span></div>
             <div class="issue-row high"><span class="issue-dot"></span><div><b>Pages locales trop faibles</b><small>Le maillage géographique ne couvre pas suffisamment les zones visées.</small></div><em>Prioritaire</em></div>
             <div class="issue-row medium"><span class="issue-dot"></span><div><b>Contenu peu différencié</b><small>Plusieurs pages répondent à des intentions proches sans angle assez distinct.</small></div><em>À optimiser</em></div>
@@ -60,7 +60,7 @@
             <div class="issue-row good"><span class="issue-dot"></span><div><b>Performance technique correcte</b><small>La base est saine et peut être conservée.</small></div><em>Correct</em></div>
           </div>
 
-          <div class="signals-panel">
+          <div class="signals-block">
             <div class="panel-head"><div><small>SIGNAUX</small><h3>Lecture rapide</h3></div></div>
             <div class="signal-line"><span>Indexabilité</span><b>Bonne</b></div>
             <div class="signal-line"><span>Maillage interne</span><b>Moyen</b></div>
@@ -74,6 +74,123 @@
     </div>
   </div>
 </section>
+
+<section class="audit-software-detail">
+  <div class="audit-detail-intro">
+    <span class="overline">EXEMPLE DE RESTITUTION · ONGLET SEO</span>
+    <h2>Pas seulement ce qui bloque.<br><em>Ce qu’il faut changer.</em></h2>
+    <p>Après le diagnostic global, l’audit descend dans le détail. Chaque problème important est accompagné d’une priorité, d’une explication et d’une action recommandée.</p>
+  </div>
+
+  <div class="audit-app-shell audit-app-shell-detail" aria-label="Exemple visuel de l’onglet SEO du diagnostic SEOKRAFT">
+    <div class="audit-app-topbar">
+      <div class="app-dots"><span></span><span></span><span></span></div>
+      <div class="app-title">SEOKRAFT / VISIBILITY SCAN</div>
+      <div class="app-status"><span></span> Analyse SEO</div>
+    </div>
+
+    <div class="audit-app-body">
+      <aside class="audit-sidebar">
+        <div class="audit-logo-mark">SK</div>
+        <nav aria-label="Sections du diagnostic SEO">
+          <span>Vue d’ensemble</span>
+          <span class="active">SEO</span>
+          <span>Local</span>
+          <span>Technique</span>
+          <span>Contenu</span>
+          <span>GEO</span>
+        </nav>
+      </aside>
+
+      <div class="audit-dashboard">
+        <div class="dashboard-heading">
+          <div>
+            <small>ONGLET SEO · EXEMPLE</small>
+            <h2>Priorités SEO</h2>
+            <p>Les actions sont classées selon leur importance et leur impact potentiel.</p>
+          </div>
+          <div class="scan-pill">site-exemple.fr / SEO</div>
+        </div>
+
+        <div class="seo-summary-strip">
+          <div><span>Score SEO</span><strong>72/100</strong></div>
+          <div><span>Priorités hautes</span><strong>3</strong></div>
+          <div><span>Optimisations</span><strong>7</strong></div>
+          <div><span>Base technique</span><strong>Correcte</strong></div>
+        </div>
+
+        <div class="seo-action-list">
+          <article class="seo-action high">
+            <div class="action-priority">
+              <span>PRIORITÉ HAUTE</span>
+              <b>01</b>
+            </div>
+            <div class="action-main">
+              <h3>Titre principal trop générique</h3>
+              <p>La page présente l’activité, mais le H1 ne cible pas assez clairement le service et la zone recherchée.</p>
+              <div class="action-change">
+                <small>À MODIFIER</small>
+                <strong>Reformuler le H1 et la balise Title autour du service principal + zone géographique.</strong>
+              </div>
+            </div>
+            <div class="action-impact"><span>Impact estimé</span><b>Fort</b></div>
+          </article>
+
+          <article class="seo-action high">
+            <div class="action-priority">
+              <span>PRIORITÉ HAUTE</span>
+              <b>02</b>
+            </div>
+            <div class="action-main">
+              <h3>Page locale trop faible</h3>
+              <p>La page existe mais ne donne pas suffisamment de contexte local pour se différencier des autres zones ciblées.</p>
+              <div class="action-change">
+                <small>À MODIFIER</small>
+                <strong>Ajouter du contenu local utile, des preuves de proximité et des liens internes depuis les pages fortes.</strong>
+              </div>
+            </div>
+            <div class="action-impact"><span>Impact estimé</span><b>Fort</b></div>
+          </article>
+
+          <article class="seo-action medium">
+            <div class="action-priority">
+              <span>À OPTIMISER</span>
+              <b>03</b>
+            </div>
+            <div class="action-main">
+              <h3>Maillage interne insuffisant</h3>
+              <p>Des pages importantes sont trop isolées et reçoivent peu de liens contextuels depuis le reste du site.</p>
+              <div class="action-change">
+                <small>À MODIFIER</small>
+                <strong>Créer plusieurs liens internes pertinents depuis les pages service et les articles associés.</strong>
+              </div>
+            </div>
+            <div class="action-impact"><span>Impact estimé</span><b>Moyen</b></div>
+          </article>
+
+          <article class="seo-action medium">
+            <div class="action-priority">
+              <span>À OPTIMISER</span>
+              <b>04</b>
+            </div>
+            <div class="action-main">
+              <h3>Contenu trop proche entre plusieurs pages</h3>
+              <p>Les intentions sont différentes, mais les textes restent trop similaires pour aider Google à comprendre le rôle exact de chaque page.</p>
+              <div class="action-change">
+                <small>À MODIFIER</small>
+                <strong>Différencier l’angle, les exemples et les requêtes ciblées de chaque page.</strong>
+              </div>
+            </div>
+            <div class="action-impact"><span>Impact estimé</span><b>Moyen</b></div>
+          </article>
+        </div>
+
+        <p class="demo-note seo-demo-note">Exemple illustratif du type de restitution fourni par SEOKRAFT. Les constats et recommandations d’un audit réel dépendent du site analysé.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="audit-analysis">
   <div class="audit-section-heading">
