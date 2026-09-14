@@ -1,1 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 92" role="img" aria-labelledby="t"><title id="t">SEOKRAFT</title><rect width="560" height="92" fill="none"/><text x="0" y="56" fill="#D6DAE1" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="54" letter-spacing="3">SEO</text><text x="112" y="56" fill="#1479ff" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="54" letter-spacing="3">KRAFT</text><text x="4" y="82" fill="#8792a4" font-family="Arial,Helvetica,sans-serif" font-size="15" letter-spacing="8">SEO · GEO · WEB</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">SEOKRAFT</title>
+  <desc id="desc">Logo bleu SEOKRAFT avec les lettres SK</desc>
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17b8ff"/>
+      <stop offset="0.55" stop-color="#1479ff"/>
+      <stop offset="1" stop-color="#075ee8"/>
+    </linearGradient>
+    <linearGradient id="letters" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d7dbe2"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="28" fill="#05080d"/>
+  <path d="M80 12 140 47v66l-60 35-60-35V47z" fill="#080d15" stroke="url(#blue)" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M80 25 128 53v54l-48 28-48-28V53z" fill="#070b11" stroke="#0b4fa8" stroke-width="2" opacity=".9"/>
+  <text x="80" y="101" text-anchor="middle" fill="url(#letters)" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="900" letter-spacing="-4">SK</text>
+  <path d="M91 61h17l-19 19 20 25H91L74 83z" fill="#1479ff" opacity=".95"/>
+  <text x="61" y="101" text-anchor="middle" fill="url(#letters)" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="900">S</text>
+</svg>

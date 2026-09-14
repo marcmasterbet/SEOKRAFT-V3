@@ -2010,3 +2010,9 @@ body{
   .nav-shell{padding-left:12px}
   .footer-nav{grid-template-columns:1fr}
 }
+
+/* SEOKRAFT blue SK brand mark — 2026 refresh */
+.brand{display:flex;align-items:center;justify-content:flex-start;flex:0 0 auto}
+.brand img{width:76px;height:76px;object-fit:contain;filter:none!important;display:block}
+@media (max-width:900px){.brand img{width:64px;height:64px}}
+@media (max-width:560px){.brand img{width:58px;height:58px}}
