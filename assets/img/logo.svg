@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 92" role="img" aria-labelledby="t"><title id="t">SEOKRAFT</title><rect width="560" height="92" fill="none"/><text x="0" y="56" fill="#D6DAE1" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="54" letter-spacing="3">SEO</text><text x="112" y="56" fill="#1479ff" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="54" letter-spacing="3">KRAFT</text><text x="4" y="82" fill="#8792a4" font-family="Arial,Helvetica,sans-serif" font-size="15" letter-spacing="8">SEO · GEO · WEB</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 92" role="img" aria-labelledby="title desc">
+  <title id="title">SEOKRAFT</title>
+  <desc id="desc">Logo SEOKRAFT bleu SK</desc>
+  <defs>
+    <linearGradient id="skBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00a8ff"/>
+      <stop offset="1" stop-color="#1769ff"/>
+    </linearGradient>
+  </defs>
+  <path d="M60 4 105 29v34L60 88 15 63V29Z" fill="#07090d" stroke="url(#skBlue)" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M60 11 98 32v28L60 81 22 60V32Z" fill="#0b0e14" stroke="#0b84ff" stroke-opacity=".35" stroke-width="1.5"/>
+  <text x="29" y="60" fill="#f7f8fb" font-family="Arial,Helvetica,sans-serif" font-size="39" font-weight="900" letter-spacing="-2">S</text>
+  <text x="54" y="60" fill="url(#skBlue)" font-family="Arial,Helvetica,sans-serif" font-size="39" font-weight="900" letter-spacing="-2">K</text>
+</svg>
