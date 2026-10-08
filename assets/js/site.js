@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   const project=params.get("projet");
   const select=document.querySelector("#project");
   if(project&&select){
-    const map={site:"site",seo:"seo",geo:"geo",audit:"audit"};
+    const map={wordpress:"wordpress","sur-mesure":"sur-mesure",avance:"avance",maintenance:"maintenance","seo-geo":"seo-geo",refonte:"refonte",audit:"audit",autre:"autre",site:"wordpress",seo:"seo-geo",geo:"seo-geo"};
     if(map[project]) select.value=map[project];
   }
   const source=document.querySelector("#source_page");
